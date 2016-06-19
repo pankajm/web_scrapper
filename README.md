@@ -33,7 +33,8 @@ We will maintain 2 arrays and 1 object namely
 
 2. Run the node server 
 
-   *node app.js*
+   *node app.js* (async module)
+   *node normal_scraping.js* (without async module)
 
 3. The message will pop up saying 'Server listning on port 8087'
 
