@@ -9,7 +9,7 @@ We will maintain 2 arrays and 1 object namely
 2. externalLinksArray => to store all links from website
 3. linksVisited => to store which links we have visited till now.
 
-#Approach
+# Approach
 
 1. Visit the home page of the website.
 2. Push all links starting with domain https://medium.com into array linksToVisit
@@ -19,3 +19,21 @@ We will maintain 2 arrays and 1 object namely
 6. while picking up every link from array liksToVisit check if we have already traversed this link. To check this simply
    check the linksVisited object. If already visited skip this link.
 7. Once the linksToVisit array is empty, export the externalLinksArray to csv.
+
+# Running the app
+
+1. Once cloned the project on your local machine, install all the dependencies using following command -
+
+   npm install
+
+2. Run the node server 
+
+   node app.js
+
+3. The message will pop up saying 'Server listning on port 8087'
+
+4. Hit the get api from your browser/restClient to export csv of all hyperlinks on medium.com
+
+   localhost:8087/crawlWeb
+
+5. Once you get the message as operation successfull, you will find one csv named hyperlinks.csv created at repo level on your machine.

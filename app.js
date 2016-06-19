@@ -30,7 +30,6 @@ app.get('/crawlWeb', crawlWeb);
 var linksVisited = {};
 var linksToVisit = ["https://medium.com"];
 var externalLinksArray = [];
-var totalLinksVisited = 0;
 
 function crawlWeb(req, res) {
     visitFirstPage(req, res);
@@ -47,7 +46,6 @@ function visitFirstPage(req, res) {
 
     if(linksToVisit.length) {
         var url = linksToVisit.pop();
-        totalLinksVisited++;
         if (!linksVisited[url]) {
             crawlThePage(url, function (error, response) {
                 if(error){
@@ -86,7 +84,6 @@ function startScrapping(callback){
     var assyncArray = [];
     for(var i = 0; assyncArray.length != 5 && linksToVisit.length != 0; i++){
         var url = linksToVisit.pop();
-        totalLinksVisited++;
         if(!linksVisited[url])
             assyncArray.push(crawlThePage.bind(null, url));
     }
@@ -94,7 +91,7 @@ function startScrapping(callback){
        if(error)
            return callback(error);
        else{
-           if(linksToVisit.length != 0 && totalLinksVisited < 20){
+           if(linksToVisit.length != 0){
                startScrapping(callback);
            }
            else{
