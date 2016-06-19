@@ -1,0 +1,21 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "This assignment is to scrap the website using node js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pankaj",
+  "license": "ISC",
+  "dependencies": {
+    "array-to-csv": "^1.0.1",
+    "cheerio": "^0.20.0",
+    "expres": "0.0.5",
+    "express": "^4.14.0",
+    "fast-csv": "^2.0.0",
+    "jQuery": "^1.7.4",
+    "request": "^2.72.0",
+    "url-parse": "^1.1.1"
+  }
+}
