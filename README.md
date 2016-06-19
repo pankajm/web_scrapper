@@ -1,6 +1,10 @@
 # web_scrapper
 
 This assignement is to crawl/scrap the website https://medium.com to find all the hyperlinks present on this website.
+The assignment contains two programs - 
+1. app.js => crawl the website using async module.
+2. normal_scraping.js => do the same thing without using async module.
+
 
 ## Assumption and data structures
 We will maintain 2 arrays and 1 object namely 
