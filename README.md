@@ -4,11 +4,13 @@ This assignement is to crawl/scrap the website https://medium.com to find all th
 
 # Assumption and data structures
 We will maintain 2 arrays and 1 object namely 
+
 1. linksToVisit => to store all links to visit in future
 2. externalLinksArray => to store all links from website
 3. linksVisited => to store which links we have visited till now.
 
 #Approach
+
 1. Visit the home page of the website.
 2. Push all links starting with domain https://medium.com into array linksToVisit
 3. Store all the links into array externalLinksArray
