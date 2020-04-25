@@ -33,7 +33,7 @@ We will maintain 2 arrays and 1 object namely
 
 2. Run the node server 
 
-   *node app.js* <websiteurl> (async module)
+   *node app.js <websiteurl>* (async module)
    
    *node normal_scraping.js* (without async module)
 
