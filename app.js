@@ -24,11 +24,12 @@ var server = app.listen(8087, function() {
 // ******************* Entry point of the app ******************* //
 
 app.get('/crawlWeb', crawlWeb);
+var websiteUrl = process.argv[2] // Get website Url from command line 
 
 // ************************************************ //
 
 var linksVisited = {};
-var linksToVisit = ["https://medium.com"];
+var linksToVisit = [websiteUrl];
 var externalLinksArray = [];
 
 function crawlWeb(req, res) {
@@ -119,7 +120,7 @@ function crawlThePage(url, callback){
 
             // get all medium.com domain links to crawl
 
-            var domainLinks = $("a[href^='https://medium.com']");
+            var domainLinks = $(`a[href^='${websiteUrl}']`);
 
             domainLinks.each(function(){
                 linksToVisit.push($(this).attr('href'));
